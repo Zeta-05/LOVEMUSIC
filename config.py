@@ -30,7 +30,7 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 # Get it from http://dashboard.heroku.com/account
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 # get your bot username from telegram 
-BOT_USERNAME = getenv("BOT_USERNAME", "SIESTA_MAX_PROBOT") 
+BOT_USERNAME = getenv("BOT_USERNAME", "ShorekeeperMusicbot") 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
     "https://github.com/VIPBOLTE/LOVEMUSIC",
@@ -40,8 +40,8 @@ GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/channelz_k")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/ANIME_UNITE_CHAT")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/Shorekeeper_updates")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/Anime_Group_India_Chat")
 
 # Maximum Limit Allowed for users to save playlists on bot's server
 SERVER_PLAYLIST_LIMIT = int(getenv("SERVER_PLAYLIST_LIMIT", "3000"))
@@ -106,13 +106,13 @@ clean = {}
 autoclean = []
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://telegra.ph/file/34a48c0114cf192d5c2ef.jpg"
+    "START_IMG_URL", "https://envs.sh/AJT.jpg"
 )
 PING_IMG_URL = getenv(
-    "PING_IMG_URL", "https://telegra.ph/file/356899d2372049fe47ad6.jpg"
+    "PING_IMG_URL", "https://envs.sh/AJ_.jpg"
 )
 PLAYLIST_IMG_URL = "https://telegra.ph/file/356899d2372049fe47ad6.jpg"
-STATS_IMG_URL = "https://telegra.ph/file/356899d2372049fe47ad6.jpg"
+STATS_IMG_URL = "https://envs.sh/AJA.jpg"
 TELEGRAM_AUDIO_URL = "https://telegra.ph/file/356899d2372049fe47ad6.jpg"
 TELEGRAM_VIDEO_URL = "https://telegra.ph/file/356899d2372049fe47ad6.jpg"
 STREAM_IMG_URL = "https://telegra.ph/file/356899d2372049fe47ad6.jpg"
