@@ -30,7 +30,7 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 # Get it from http://dashboard.heroku.com/account
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 # get your bot username from telegram 
-BOT_USERNAME = getenv("BOT_USERNAME", "ShorekeeperMusicbot") 
+BOT_USERNAME = getenv("BOT_USERNAME", "TestXmusic_01Bot") 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
     "https://github.com/VIPBOLTE/LOVEMUSIC",
