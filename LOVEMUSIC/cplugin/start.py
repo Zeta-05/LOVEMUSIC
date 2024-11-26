@@ -43,7 +43,7 @@ YUMI_PICS = [
 
 # Function to send the start video
 async def send_start_video(client, message, _):
-    video_url = "https://example.com/start_video.mp4"  # Change with your actual video URL
+    video_url = "https://envs.sh/z7S.mp4"  # Change with your actual video URL
     await message.reply_video(
         video_url,
         caption=_["start_video_caption"],
