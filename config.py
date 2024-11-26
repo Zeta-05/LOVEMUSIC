@@ -19,10 +19,10 @@ DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 16000))
 
 # Chat id of a group for logging bot's activities
 LOGGER_ID = int(getenv("-1002434949932"))
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1002434949932"))
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1002324830715"))
 
 # Get this value from  on Telegram by /id
-OWNER_ID = int(getenv("7038202445"))
+OWNER_ID = int(getenv("7678359785"))
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
