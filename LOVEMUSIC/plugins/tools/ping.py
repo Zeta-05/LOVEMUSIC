@@ -113,11 +113,11 @@ async def ping_com(client, message: Message, _):
                 [
                     InlineKeyboardButton(
                         text="✦ ɢʀᴏᴜᴘ ✦",
-                        url=f"https://t.me/goku_groupz",
+                        url=f"https://t.me/Anime_Chat_Group_Community",
                     ),
                     InlineKeyboardButton(
                         text="✧ ᴍᴏʀᴇ ✧",
-                        url=f"https://t.me/channelz_k",
+                        url=f"https://t.me/Kayto_Official",
                     ),
                 ],
                 [
