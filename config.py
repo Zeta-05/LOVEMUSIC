@@ -18,8 +18,8 @@ MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 16000))
 
 # Chat id of a group for logging bot's activities
-LOGGER_ID = int(getenv("-1002434949932"))
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1002324830715"))
+LOGGER_ID = int(getenv("LOGGER_ID", "-1002178188404"))
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1002178188404"))
 
 # Get this value from  on Telegram by /id
 OWNER_ID = int(getenv("7678359785"))
@@ -30,7 +30,7 @@ HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
 # Get it from http://dashboard.heroku.com/account
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 # get your bot username from telegram 
-BOT_USERNAME = getenv("BOT_USERNAME", "TestXmusic_01Bot") 
+BOT_USERNAME = getenv("BOT_USERNAME", "UtopiaMaxBot") 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
     "https://github.com/VIPBOLTE/LOVEMUSIC",
@@ -105,23 +105,21 @@ clean = {}
 
 autoclean = []
 
-START_IMG_URL = getenv(
-    "START_IMG_URL", "https://envs.sh/j1E.mp4"
+START_IMG_URL = os.getenv(
+    "START_IMG_URL", "https://graph.org/file/364a09ddd47378efaecfb-2d3ae182ccf44e9087.jpg"
 )
-PING_IMG_URL = getenv(
-    "PING_IMG_URL", "https://envs.sh/AJ_.jpg"
+PING_IMG_URL = os.getenv(
+    "PING_IMG_URL", "https://graph.org/file/35ef624f376e22a0fa1d7-1ea63e464ea9f36fab.jpg"
 )
-PLAYLIST_IMG_URL = "https://telegra.ph/file/356899d2372049fe47ad6.jpg"
-STATS_IMG_URL = "https://envs.sh/AJA.jpg"
-TELEGRAM_AUDIO_URL = "https://telegra.ph/file/356899d2372049fe47ad6.jpg"
-TELEGRAM_VIDEO_URL = "https://telegra.ph/file/356899d2372049fe47ad6.jpg"
-STREAM_IMG_URL = "https://telegra.ph/file/356899d2372049fe47ad6.jpg"
-SOUNCLOUD_IMG_URL = "https://telegra.ph/file/356899d2372049fe47ad6.jpg"
-YOUTUBE_IMG_URL = "https://telegra.ph/file/356899d2372049fe47ad6.jpg"
-SPOTIFY_ARTIST_IMG_URL = "https://telegra.ph/file/356899d2372049fe47ad6.jpg"
-SPOTIFY_ALBUM_IMG_URL = "https://telegra.ph/file/356899d2372049fe47ad6.jpg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://telegra.ph/file/356899d2372049fe47ad6.jpg"
-
+PLAYLIST_IMG_URL = "https://envs.sh/K-2.jpg",
+TELEGRAM_AUDIO_URL = "https://envs.sh/K-2.jpg",
+TELEGRAM_VIDEO_URL = "https://envs.sh/K-2.jpg",
+STREAM_IMG_URL = "https://envs.sh/K-2.jpg",
+SOUNCLOUD_IMG_URL = "https://envs.sh/K-2.jpg",
+YOUTUBE_IMG_URL = "https://envs.sh/K-2.jpg",
+SPOTIFY_ARTIST_IMG_URL = "https://envs.sh/K-2.jpg",
+SPOTIFY_ALBUM_IMG_URL = "https://envs.sh/K-2.jpg",
+SPOTIFY_PLAYLIST_IMG_URL = "https://envs.sh/K-2.jpg",
 
 def time_to_seconds(time):
     stringt = str(time)
