@@ -40,7 +40,7 @@ SPAM_WINDOW_SECONDS = 5
 
 
 YUMI_PICS = [
-"https://telegra.ph/file/7c29355ceb5aabd8be513.mp4"
+"https://envs.sh/z7S.mp4"
 
 ]
 
