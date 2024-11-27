@@ -18,8 +18,8 @@ MONGO_DB_URI = getenv("MONGO_DB_URI", None)
 DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 16000))
 
 # Chat id of a group for logging bot's activities
-LOGGER_ID = int(getenv("LOGGER_ID", "-1002178188404"))
-LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "-1002178188404"))
+LOGGER_ID = int(getenv("LOGGER_ID", "@ZTX_HEAD_QUATERS"))
+LOG_GROUP_ID = int(getenv("LOG_GROUP_ID", "@ZTX_HEADQUATERS"))
 
 # Get this value from  on Telegram by /id
 OWNER_ID = int(getenv("OWNER_ID", "7678359785"))
@@ -40,8 +40,8 @@ GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/Shorekeeper_updates")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/Anime_Group_India_Chat")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/Kayto_Official")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/ZTX_HEADQUARTERS")
 
 # Maximum Limit Allowed for users to save playlists on bot's server
 SERVER_PLAYLIST_LIMIT = int(getenv("SERVER_PLAYLIST_LIMIT", "3000"))
