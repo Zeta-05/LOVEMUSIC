@@ -1,7 +1,6 @@
 import time
 import asyncio
-from pyrogram.errors import UserAlreadyParticipant
-from pyrogram.errors import UserNotParticipant
+from pyrogram.errors import UserAlreadyParticipant, UserNotParticipant
 from pyrogram import filters, Client
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from youtubesearchpython.__future__ import VideosSearch
@@ -33,6 +32,7 @@ user_command_count = {}
 # Define the threshold for command spamming (e.g., 20 commands within 60 seconds)
 SPAM_THRESHOLD = 2
 SPAM_WINDOW_SECONDS = 5
+
 
 # Function to send the start video
 async def send_start_video(client, message, _):
@@ -187,7 +187,7 @@ async def start_gp(client, message: Message, _):
     try:
         userbot = await get_assistant(message.chat.id)
         message = await message.reply_text(
-            f"**ᴄʜᴇᴄᴋɪɴɢ [ᴀssɪsᴛᴀɴᴛ](tg://openmessage?user_id={userbot.id}) ᴀᴠᴀɪʟᴀʙɪᴛʟʏ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ...**"
+            f"**ᴄʜᴇᴄᴋɪɴɢ [ᴀssɪsᴛᴀɴᴛ](tg://openmessage?user_id={userbot.id}) ᴀᴠᴀɪʟᴀʙɪʟɪᴛʏ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ...**"
         )
         is_userbot = await client.get_chat_member(message.chat.id, userbot.id)
         if is_userbot:
@@ -199,49 +199,11 @@ async def start_gp(client, message: Message, _):
                 f"**[ᴀssɪsᴛᴀɴᴛ](tg://openmessage?user_id={userbot.id}) ɪs ɴᴏᴛ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ.**"
             )
     except UserNotParticipant:
-        await message.reply_text(
-            f"**[ᴀssɪsᴛᴀɴᴛ](tg://openmessage?user_id={userbot.id}) ɪs ɴᴏᴛ ᴘᴀʀᴛɪᴄɪᴘᴀᴛɪɴɢ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ!**"
+        await message.edit_text(
+            f"**[ᴀssɪsᴛᴀɴᴛ](tg://openmessage?user_id={userbot.id}) ɪs ɴᴏᴛ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ.**"
         )
+    except UserAlreadyParticipant:
+        pass
     except Exception as e:
-        await message.reply_text(f"**Error checking assistant: {str(e)}**")
+        await message.edit_text(f"**Error checking assistant: {str(e)}**")
         print(e)
-    
-    await add_served_chat_clone(message.chat.id)
-    # Send user a message for group-specific welcome
-    if message.chat.type == "supergroup":
-        welcome_msg = _["start_3"].format(message.chat.title, a.mention)
-        await message.reply_text(welcome_msg)
-    
-
-# Handle banned users or any user blacklist check in start command for both PM and Group
-async def check_if_banned(client, message: Message):
-    user_id = message.from_user.id
-    if await is_banned_user(user_id):
-        await message.reply_text(
-            f"**{message.from_user.mention}, ʏᴏᴜ ᴀʀᴇ ʙᴀɴɴᴇᴅ ᴛʀᴏᴍ ᴜѕɪɴɢ ᴛʜɪs ʙᴏᴛ.**"
-        )
-        return True
-    return False
-
-
-# Optional: Monitor unban or commands on group level
-@Client.on_message(filters.command("unban") & filters.group)
-async def unban_user(client, message: Message):
-    user_id = message.from_user.id
-    if not await is_banned_user(user_id):
-        await message.reply_text("**You are not banned.**")
-    else:
-        await message.reply_text("**Unbanning user...**")
-        # Implement unbanning logic if required here
-        # For example: remove from blacklist, etc.
-
-
-@Client.on_message(filters.command("ban") & filters.group)
-async def ban_user(client, message: Message):
-    user_id = message.from_user.id
-    if await is_banned_user(user_id):
-        await message.reply_text("**User is already banned.**")
-    else:
-        await message.reply_text("**Banning user...**")
-        # Implement banning logic here
-        # For example: add to blacklist, etc.
