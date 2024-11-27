@@ -33,7 +33,7 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 BOT_USERNAME = getenv("BOT_USERNAME", "UtopiaMaxBot") 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/VIPBOLTE/LOVEMUSIC",
+    "https://github.com/Zeta-O5/LOVEMUSIC",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 GIT_TOKEN = getenv(
@@ -41,7 +41,7 @@ GIT_TOKEN = getenv(
 )  # Fill this variable if your upstream repository is private
 
 SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/Kayto_Official")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/ZTX_HEADQUARTERS")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/Anime_Chat_Group_Community")
 
 # Maximum Limit Allowed for users to save playlists on bot's server
 SERVER_PLAYLIST_LIMIT = int(getenv("SERVER_PLAYLIST_LIMIT", "3000"))
