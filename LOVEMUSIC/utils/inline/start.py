@@ -1,7 +1,7 @@
 from pyrogram.types import InlineKeyboardButton
 
 import config
-from config import SUPPORT_GROUP
+from config import SUPPORT_CHAT
 from LOVEMUSIC import app
 
 
@@ -18,7 +18,7 @@ def start_pannel(_):
             InlineKeyboardButton(text="☢ 𝐒𝙴𝚃 ☢", callback_data="settings_helper"),
         ],
         [
-            InlineKeyboardButton(text="✡ 𝐆𝚁𝙾𝚄𝙿 ✡", url=config.SUPPORT_GROUP),
+            InlineKeyboardButton(text="✡ 𝐆𝚁𝙾𝚄𝙿 ✡", url=config.SUPPORT_CHAT),
         ],
     ]
     return buttons
@@ -33,7 +33,7 @@ def private_panel(_):
             )
         ],
         [
-            InlineKeyboardButton(text="𝐆𝚁𝙾𝚄𝙿✨", url=config.SUPPORT_GROUP),
+            InlineKeyboardButton(text="𝐆𝚁𝙾𝚄𝙿✨", url=config.SUPPORT_CHAT),
             InlineKeyboardButton(text="𝐌ᴏʀᴇ🥀", url=config.SUPPORT_CHANNEL),
         ],
         [
@@ -51,7 +51,7 @@ def alive_panel(_):
             InlineKeyboardButton(
                 text="✿︎ ᴀᴅᴅ ᴍᴇ ✿︎", url=f"https://t.me/{app.username}?startgroup=true"
             ),
-            InlineKeyboardButton(text=_["S_B_3"], url=f"{SUPPORT_GROUP}"),
+            InlineKeyboardButton(text=_["S_B_3"], url=f"{SUPPORT_CHAT}"),
         ],
     ]
     return buttons
