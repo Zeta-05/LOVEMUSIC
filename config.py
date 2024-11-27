@@ -111,15 +111,32 @@ START_IMG_URL = os.getenv(
 PING_IMG_URL = os.getenv(
     "PING_IMG_URL", "https://graph.org/file/35ef624f376e22a0fa1d7-1ea63e464ea9f36fab.jpg"
 )
-PLAYLIST_IMG_URL = "https://envs.sh/K-2.jpg",
-TELEGRAM_AUDIO_URL = "https://envs.sh/K-2.jpg",
-TELEGRAM_VIDEO_URL = "https://envs.sh/K-2.jpg",
-STREAM_IMG_URL = "https://envs.sh/K-2.jpg",
-SOUNCLOUD_IMG_URL = "https://envs.sh/K-2.jpg",
-YOUTUBE_IMG_URL = "https://envs.sh/K-2.jpg",
-SPOTIFY_ARTIST_IMG_URL = "https://envs.sh/K-2.jpg",
-SPOTIFY_ALBUM_IMG_URL = "https://envs.sh/K-2.jpg",
-SPOTIFY_PLAYLIST_IMG_URL = "https://envs.sh/K-2.jpg",
+PLAYLIST_IMG_URL = os.getenv(
+    "PLAYLIST_IMG_URL", "https://envs.sh/K-2.jpg"
+) 
+TELEGRAM_AUDIO_URL = os.getenv(
+    "TELEGRAM_AUDIO_URL", "https://envs.sh/K-2.jpg"
+) 
+TELEGRAM_VIDEO_URL = os.getenv(
+    "TELEGRAM_VIDEO_URL", "https://envs.sh/K-2.jpg"
+) 
+STREAM_IMG_URL = os.getenv(
+    "STREAM_IMG_URL", "https://envs.sh/K-2.jpg"
+) 
+SOUNCLOUD_IMG_URL = os.getenv(
+    "SOUNCLOUD_IMG_URL", "https://envs.sh/K-2.jpg"
+) 
+YOUTUBE_IMG_URL = os.getenv(
+    "YOUTUBE_IMG_URL", "https://envs.sh/K-2.jpg"
+) 
+SPOTIFY_ARTIST_IMG_URL = os.getenv(
+    "SPOTIFY_ARTIST_IMG_URL", "https://envs.sh/K-2.jpg",
+SPOTIFY_ALBUM_IMG_URL = os.getenv(
+    "SPOTIFY_ALBUM_IMG_URL", "https://envs.sh/K-2.jpg"
+) 
+SPOTIFY_PLAYLIST_IMG_URL = os.getenv(
+    "SPOTIFY_PLAYLIST_IMG_URL", "https://envs.sh/K-2.jpg"
+) 
 
 def time_to_seconds(time):
     stringt = str(time)
