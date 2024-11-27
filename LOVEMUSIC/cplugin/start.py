@@ -46,7 +46,7 @@ async def send_start_video(client, message, _):
     video_url = "https://envs.sh/z7S.mp4"  # Change with your actual video URL
     await message.reply_video(
         video_url,
-        caption=_["start_video_caption"],
+        caption=_["🌸✨ᴋᴏɴɪᴄʜɪᴡᴀ, {0}"],
         reply_markup=InlineKeyboardMarkup([
             [InlineKeyboardButton("🎵 Play Music", callback_data="play_music")]
         ])
@@ -70,7 +70,7 @@ async def start_pm(client: Client, message: Message, _):
         if user_command_count[user_id] > SPAM_THRESHOLD:
             # Block the user if they exceed the threshold
             hu = await message.reply_text(
-                f"**{message.from_user.mention} ᴘʟᴇᴀsᴇ ᴅᴏɴᴛ ᴅᴏ sᴘᴀᴍ, ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ ᴀғᴛᴇʀ 5 sᴇᴄ**"
+                f"**{message.from_user.mention} ᴘʟᴇᴀsᴇ ᴅᴏɴᴛ ᴅᴏ sᴘᴀᴍ, ᴀɴᴅ ᴛʀʏ ᴀɢᴀɪɴ ᴀғᴛᴇʀ 5 sᴇᴄ*,*"
             )
             await asyncio.sleep(3)
             await hu.delete()
